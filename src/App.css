@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #06b6d4;
+  --color-dark: #0f172a;
+  --color-light: #f8fafc;
+}
+
+/* Styles globaux */
+html, body {
+  @apply bg-gradient-to-b from-[var(--color-dark)] to-[#1e293b] text-white antialiased;
+  scroll-behavior: smooth;
+}

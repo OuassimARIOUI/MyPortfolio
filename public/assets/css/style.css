@@ -1,0 +1,322 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+}
+header {
+    background: #1e1e1e;
+    padding: 2em;
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+.intro h1 {
+    margin: 0;
+}
+section {
+    padding: 2em;
+    border-bottom: 1px solid #333;
+}
+
+@keyframes grow {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5em;
+}
+.project-card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    padding: 1em;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #03dac6;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.project-card:hover {
+    transform: scale(1.03);
+}
+.project-card > img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+footer {
+    background: #1e1e1e;
+    padding: 1em;
+    text-align: center;
+    font-size: 0.9em;
+}
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .intro {
+        margin-left: 2em;
+        text-align: left;
+    }
+}
+
+.slider {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* ou fixe: height: 200px */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+.slider img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* <-- Affiche toute l'image sans la couper */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+
+.slider img.active {
+    opacity: 1;
+}
+
+
+
+
+.skill-donut {
+    width: 120px;
+    height: 120px;
+    margin: 15px;
+    position: relative;
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+}
+.donut {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+.donut-bg {
+    fill: none;
+    stroke: #2c2c2c;
+    stroke-width: 3.8;
+}
+.donut-ring {
+    fill: none;
+    stroke: #03dac6;
+    stroke-width: 3.8;
+    stroke-linecap: round;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    transition: stroke-dashoffset 1.5s ease-out;
+}
+
+.donut-text {
+    fill: #ffffff;
+    font-size: 0.45em;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+.tooltip {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #03dac6;
+    color: #121212;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+.skill-donut:hover .tooltip {
+    opacity: 1;
+}
+
+.experience-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+.experience-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    background-color: #121212;
+    padding: 1em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.experience-card:hover {
+    transform: scale(1.03);
+}
+
+.experience-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    background-color: #121212;
+    padding: 1em;
+}
+
+.experience-text {
+    padding: 1em;
+}
+
+.experience-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background-color: #121212;
+    padding: 1em;
+}
+
+.experience-logo img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
+.experience-text h3 {
+    margin: 0.5em 0 0.3em;
+    font-size: 1.1em;
+    color: #03dac6;
+    font-weight: bold;
+}
+
+.experience-text p {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+
+.education-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.card {
+    background-color: #20232a;
+    border: 1px solid #2a2d34;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(3, 218, 198, 0.15);
+    overflow: hidden;
+    width: 220px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(3, 218, 198, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover; /* pour afficher toute l’image sans déformation */
+    object-position: center;
+    background-color: #121212;
+}
+
+.card-content {
+    padding: 1.2em;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-weight: 600;
+    margin-bottom: 0.4em;
+    font-size: 1.1em;
+    color: #03dac6;
+}
+
+.card-content p {
+    font-size: 0.9em;
+    color: #bbbbbb;
+    line-height: 1.4;
+}
+
+
+
+.footer-contact {
+    background: #1e1e1e;
+    padding: 2em;
+    text-align: center;
+    color: #f0f0f0;
+    border-top: 1px solid #333;
+}
+
+.footer-contact h2 {
+    margin-bottom: 0.5em;
+}
+
+.footer-contact p {
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+.footer-contact a {
+    color: #03dac6;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 0.5em;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
