@@ -97,8 +97,10 @@ my-portfolio/
 ## 📫 Contact
 
 **Mohamed Achraf Ouassim ARIOUI**  
-📍 Avignon, France  
-🎓 M1 Ingénierie Logicielle
+
+- 📧 mohamedachrefwassim@gmail.com
+- 📍 Avignon, France  
+- 🎓 M1 Ingénierie Logicielle
 
 ---
 
