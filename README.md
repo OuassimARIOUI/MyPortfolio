@@ -56,7 +56,7 @@ npm run dev
 | `npm run preview` | Prévisualise le build |
 | `npm run lint` | Vérifie le code avec ESLint |
 
-## 📁 Structure du projet
+## 📁 Structure du projet:
 
 ```
 my-portfolio/
